@@ -27,7 +27,4 @@ class QuestionTestCase(unittest.TestCase):
                                  data=json.dumps(self.question))
         result = json.loads(response.data)
         self.assertEqual(response.status_code, 201)
-        self.assertEqual(
-            result['data']['message'], "question added")
-        self.assertEqual(
-        result['status'], 201)
+        
