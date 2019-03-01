@@ -24,4 +24,4 @@ class QuestionTestCase(unittest.TestCase):
             """method to test post a question endpoint"""
             response = self.app.post("/api/v1/questions",
                                      headers={'Content-Type': 'application/json'},data=json.dumps(self.question))
-            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.status_code, 201)
